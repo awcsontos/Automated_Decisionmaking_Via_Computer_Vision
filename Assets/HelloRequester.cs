@@ -25,7 +25,7 @@ public class HelloRequester : RunAbleThread
             while (Running)
             {
                 Debug.Log("Sending Message");
-                client.SendFrame(@"C:\Users\SlowL\CS482Final\Assets\decisionScreenshot\cameracapture" + counter + ".png");
+                client.SendFrame(@"C:\Users\SlowL\CS482Final\Assets\" , counter);
                 // ReceiveFrameString() blocks the thread until you receive the string, but TryReceiveFrameString()
                 // do not block the thread, you can try commenting one and see what the other does, try to reason why
                 // unity freezes when you use ReceiveFrameString() and play and stop the scene without running the server
