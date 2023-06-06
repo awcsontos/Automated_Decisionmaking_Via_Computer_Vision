@@ -82,7 +82,7 @@ def display(imagePath, num):
     clf.fit(x_train,y_train)
 
     #Load the test image, and get a preditiction based on the trained images. 
-    test_image = load_image(imagePath + "decisionScreenshot/cameracapture" + num)
+    test_image = load_image(imagePath + "decisionScreenshot/cameracapture" + num + ".png")
     testResponse = clf.predict(convertImage(test_image)).ravel().tolist()
     occurence_count = Counter(labelEncoder.inverse_transform([int(a) for a in testResponse]))
     return(occurence_count.most_common(1)[0][0])
